@@ -1,0 +1,19 @@
+{
+  "welcomeFile": "s4hanaui/webapp/",
+  "authenticationMethod": "route",
+  "sessionTimeout": 100,
+  "pluginMetadataEndpoint": "/metadata",
+  "routes": [
+    {
+      "source": "^/s4hanaui/webapp/(.*)",
+      "target": "$1",
+      "localDir": "s4hanaui/webapp/",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/(.*)$",
+      "destination": "srv-api",
+      "authenticationType": "xsuaa"
+    }
+  ]
+}

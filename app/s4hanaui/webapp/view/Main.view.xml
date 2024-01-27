@@ -1,0 +1,15 @@
+<mvc:View controllerName="com.s4.s4hanaui.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <App>
+        <Page id="page" title="{i18n>title}">
+            <content >
+                <List items= '{/MySalesOrder}'>
+                    <items>
+                        <ObjectListItem title="{SalesOrder}" intro="{SalesOrganization}" number="{PaymentMethod}" highlightText="{ SalesOrderType }" numberUnit="{SoldToParty}" icon="sap-icon://sales-order"/>
+                    </items>
+                </List>
+            </content >
+        </Page>
+    </App>
+</mvc:View>
